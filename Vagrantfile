@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "puphpet/centos65-x64"
-
+  config.vm.synced_folder "C:/Users/woosy/Desktop/dev/vagrant/webCrawling/src", "/home/vagrant/src"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
