@@ -1,16 +1,16 @@
 // URLのファイルをsavePathにダウンロードする。
-var url = "https://woosyume.atlassian.net";
+var url = "http://google.co.jp";
 var savePath = "test.html";
 
-var https = require('https');
+var http = require('http');
 var fs = require('fs');
 
 var outFile = fs.createWriteStream(savePath);
 
-https.get(url, function(response) {
+http.get(url, function(response) {
   response.pipe(outFile);
   response.on('end', function() {
     outFile.close();
     console.log('response success');
   });
-}); 
+});
